@@ -26,7 +26,7 @@ $agi->verbose("WE NEED TO LOG CALL WITH SIP CALL ID $sip_callid FROM VOIPMONITOR
 $values_to_get = array('audioreadformat', 'audionativeformat', 'audiowriteformat', 'peerip', 'recvip', 'from', 'uri', 'useragent', 'peername', 'peerip', 'peername', 'channeltype', 'rtpdest'); 
 $email_msg = '';
 $email_msg .= "Hi there,\n\n";
-$email_msg .= "The peer $peer just dialed *# to indicate that they may have a quality issue. Below is the details of the call.\n\n\n"; 
+$email_msg .= "The peer $peername just dialed *# to indicate that they may have a quality issue. Below is the details of the call.\n\n\n"; 
 
 foreach($values_to_get as $item){
         $var = get_channel_var($item);
