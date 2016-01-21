@@ -20,11 +20,8 @@ $agi = new AGI();
 //This line is not needed but hepful if you want to dump all the data on the call.
 //$agi->exec("DumpChan", "");
 
-
 $agi->exec('PlayBack', 'one-moment-please');
-
-$values_to_get = array('audioreadformat', 'audionativeformat', 'audiowriteformat', 'peerip', 'recvip', 'from', 'uri', 'useragent', 'peername', 'peerip', 'peername', 'channeltype', 'rtpdest'); 
-
+$values_to_get = array('audioreadformat', 'audionativeformat', 'audiowriteformat', 'peerip', 'recvip', 'from', 'uri', 'useragent', 'peername', 'channeltype', 'rtpdest');
 $peer = get_channel_var('peername');
 
 $email_msg = '';
