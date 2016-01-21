@@ -3,7 +3,14 @@
 include ("lib/phpagi/phpagi.php");
 
 /*
-This script requires the php-agi library (http://phpagi.sourceforge.net/) which is a bit old.
+This script requires the php-agi library (http://phpagi.sourceforge.net/). You need to modify php.ini
+1) register_argc_argv
+	From:	register_argc_argv = Off
+	To:	register_argc_argv = On
+2) variables_order
+	From: variables_order = "GPCS"
+	To:	variables_order = "EGPCS"
+The order forthe value of variables_order is IMPORTANT!
 
 In features.conf under [applicationmap] you need to add:
 log_call_caller => *#,self/caller,agi,/var/lib/asterisk/agi-bin/log_bad_call.php
