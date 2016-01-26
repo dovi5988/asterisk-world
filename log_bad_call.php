@@ -21,14 +21,10 @@ Exten => _X.,1,set(__DYNAMIC_FEATURES=log_call_caller#log_call_callee)
 */
 
 $email_contact = 'example@example.org'; //seperate them by ,
-
 $agi = new AGI();
-
 $sip_callid = get_var('SIPCALLID');
-
 $peername = get_channel_var('peername');
 $agi->verbose("WE NEED TO LOG CALL WITH SIP CALL ID $sip_callid FROM VOIPMONITOR AS PEER $peername IS COMPLAINING");
-
 
 $values_to_get = array('audioreadformat', 'audionativeformat', 'audiowriteformat', 'peerip', 'recvip', 'from', 'uri', 'useragent', 'peername', 'peerip', 'peername', 'channeltype', 'rtpdest'); 
 $email_msg = '';
